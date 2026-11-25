@@ -14,5 +14,10 @@ jobs:
       - name: Stop delete containers
         run: docker compose down
 
+      - name: Prepare directories and copy network.xml
+        run: |
+          mkdir -p /srv/media/videos/data/config/config /srv/media/videos/data/cache
+          cp config/network.xml /srv/media/videos/data/config/config/network.xml
+
       - name: Start Containers
         run: docker compose up -d --build
