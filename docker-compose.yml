@@ -5,8 +5,6 @@ services:
     image: jellyfin/jellyfin:12
     user: 1000:1000 # must own the config/cache folders and be able to read media folder(s)
     restart: unless-stopped
-    # environment:
-    #   - JELLYFIN_PublishedServerUrl=https://your-domain.com/jellyfin
     volumes:
       - "/srv/media/videos/data/config:/config"
       - "/srv/media/videos/data/cache:/cache"
