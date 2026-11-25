@@ -10,7 +10,7 @@ services:
     volumes:
       - "/srv/media/videos/data/config:/config"
       - "/srv/media/videos/data/cache:/cache"
-      - "/srv/media/videos:/media/videos:ro"
+      - "/srv/media/videos/game-captures-new:/media/videos:ro"
     networks:
       - shared-network
 
